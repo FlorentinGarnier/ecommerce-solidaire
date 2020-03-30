@@ -42,8 +42,9 @@ compile-asset-dev: ## Compile Assets
 	$(DOCKER_COMPOSE) run encore yarn encore dev
 
 .PHONY: install
-install:
+install: sylius/node_modules
 	$(DOCKER_COMPOSE) exec php composer install
+	$(DOCKER_COMPOSE) run encore yarn build
 	chmod -R 777 var/*
 
 
@@ -89,3 +90,7 @@ cc: ## Clear Cache
 .PHONY: sylius-install
 sylius-install: ## Installe Sylius
 	$(DOCKER_COMPOSE) exec php bin/console sylius:install
+
+sylius/node_modules: sylius/package.json
+	$(DOCKER_COMPOSE) run encore yarn install
+	touch sylius/node_modules
