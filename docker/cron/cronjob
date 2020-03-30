@@ -1,0 +1,3 @@
+# Refresh payment
+
+* * * * * /bin/echo `date` && /usr/local/bin/php /srv/bin/console payplug:update-payment-state >> /srv/var/log/cron.log 2>&1

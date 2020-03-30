@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+
+  php:
+    image: greedoo/php
+    volumes:
+      - ./sylius:/srv
+      - ./docker/php/config/php.ini:/usr/local/etc/php/conf.d/php.ini
+    links:
+      - db
+    entrypoint: >
+      /bin/sh -c "
+      apt-get update ;
+      apt-get install -y wkhtmltopdf ;
+      apt-get clean ;
+      php-fpm ;
+      "
+
+  nginx:
+    image: greedoo/nginx
+    volumes:
+      - ./sylius:/srv
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./docker/nginx/vhost.conf:/etc/nginx/conf.d/default.conf
+
+    links:
+      - php
+
+
+  encore:
+    image: node
+    volumes:
+      - ./:/srv
+    working_dir: /srv
+
+  db:
+    image: mariadb:10.4

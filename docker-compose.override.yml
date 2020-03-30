@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+
+  php:
+    volumes:
+      - nfsmount:/srv
+    links:
+      - db
+
+  nginx:
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/srv
+    links:
+      - php
+
+  db:
+    volumes:
+      #- ./backup.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ./docker/db/data:/var/lib/mysql
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+      MYSQL_DATABASE: ecommerce-solidaire
+      MYSQL_USER: ecommerce-solidaire
+      MYSQL_PASSWORD: ecommerce-solidaire
+    restart: on-failure
+    networks:
+      - default
+    ports:
+      - "13306:3306"
+
+
+volumes:
+  nfsmount:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3
+      device: ":/Users/florentingarnier/Projets/ecommerce-solidaire/sylius"
