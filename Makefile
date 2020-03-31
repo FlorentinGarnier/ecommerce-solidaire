@@ -34,11 +34,11 @@ install-prod:
 	chmod -R 777 var/*
 
 .PHONY: compile-asset-prod
-compile-asset-prod: ## Compile Assets
+compile-asset-prod: sylius/node_modules ## Compile Assets
 	$(DOCKER_COMPOSE) run encore yarn encore production
 
 .PHONY: compile-asset-dev
-compile-asset-dev: ## Compile Assets
+compile-asset-dev: sylius/node_modules ## Compile Assets
 	$(DOCKER_COMPOSE) run encore yarn encore dev
 
 .PHONY: install
@@ -83,13 +83,13 @@ clean: ## Efface l'application
 ##Symfony
 .PHONY: cc
 cc: ## Clear Cache
-	$(DOCKER_COMPOSE) exec php bin/console c:c
+	$(DOCKER_COMPOSE) exec php php bin/console c:c
 
 ##Sylius
 
 .PHONY: sylius-install
 sylius-install: ## Installe Sylius
-	$(DOCKER_COMPOSE) exec php bin/console sylius:install
+	$(DOCKER_COMPOSE) exec php php bin/console sylius:install
 
 sylius/node_modules: sylius/package.json
 	$(DOCKER_COMPOSE) run encore yarn install
