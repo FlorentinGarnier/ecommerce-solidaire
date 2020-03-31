@@ -31,7 +31,7 @@ install-prod:
 	$(DOCKER_COMPOSE) run encore yarn
 	$(DOCKER_COMPOSE) run encore yarn encore production
 
-	chmod -R 777 var/*
+	chmod -R 777 sylius/var/*
 
 .PHONY: compile-asset-prod
 compile-asset-prod: sylius/node_modules ## Compile Assets
@@ -45,7 +45,7 @@ compile-asset-dev: sylius/node_modules ## Compile Assets
 install: sylius/node_modules
 	$(DOCKER_COMPOSE) exec php composer install
 	$(DOCKER_COMPOSE) run encore yarn build
-	chmod -R 777 var/*
+	chmod -R 777 sylius/var/*
 
 
 .PHONY: build
@@ -61,12 +61,12 @@ start: ## Lance l'application
 .PHONY: update
 update: ## Mise à jour de l'application
 	$(DOCKER_COMPOSE) exec php composer update
-	chmod -r 777 var/*
+	chmod -R 777 sylius/var/*
 
 .PHONY: update-prod
 update-prod: ## Mise à jour de l'application
 	$(DOCKER_COMPOSE) exec php composer update --no-dev --optimize-autoloader
-	chmod -r 777 var/*
+	chmod -R 777 sylius/var/*
 
 .PHONY: logs
 logs: ## Affiche les logs
