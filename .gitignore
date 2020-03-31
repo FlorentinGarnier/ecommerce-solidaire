@@ -1,2 +1,3 @@
 /docker/db/data/
 /sylius/public/build/
+docker-compose.override.yml
