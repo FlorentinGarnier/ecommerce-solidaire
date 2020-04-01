@@ -1,0 +1,12 @@
+sylius_mailer:
+    sender:
+        name: '%env(MAILER_NAME)%'
+        address: '%env(MAILER_ADDRESS)%'
+
+    emails:
+        order_confirmation:
+            enabled: false
+        
+#        admin_new_order:
+#            subject: "Nouvelle commande Salaisons du Sancy"
+#            template: "Email/admin/new_order.html.twig"
