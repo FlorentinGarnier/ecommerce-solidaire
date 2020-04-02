@@ -329,6 +329,12 @@
     "paragonie/random_compat": {
         "version": "v2.0.17"
     },
+    "payplug/payplug-php": {
+        "version": "2.7.0"
+    },
+    "payplug/payplug-sylius": {
+        "version": "1.4-dev"
+    },
     "payum/iso4217": {
         "version": "1.0.1"
     },
