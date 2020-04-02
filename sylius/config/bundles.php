@@ -58,4 +58,5 @@ return [
     FOS\CKEditorBundle\FOSCKEditorBundle::class => ['all' => true],
     SitemapPlugin\SitemapPlugin::class => ['all' => true], // Sitemap support
     BitBag\SyliusCmsPlugin\BitBagSyliusCmsPlugin::class  => ['all' => true],
+    PayPlug\SyliusPayPlugPlugin\PayPlugSyliusPayPlugPlugin::class => ['all' => true],
 ];

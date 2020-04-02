@@ -19,6 +19,7 @@
     "require": {
         "php": "^7.3",
         "bitbag/cms-plugin": "^2.3",
+        "payplug/payplug-sylius": "^1.4@dev",
         "sylius/sylius": "~1.7.0@rc",
         "symfony/dotenv": "^4.4",
         "symfony/flex": "^1.2"

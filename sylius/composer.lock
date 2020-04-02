@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "86f9c9a5ab132b029cfe64f3140094f8",
+    "content-hash": "7b9fd818c0d3a67f313a0310872f0d5c",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -3889,6 +3889,127 @@
                 "random"
             ],
             "time": "2019-01-03T20:59:08+00:00"
+        },
+        {
+            "name": "payplug/payplug-php",
+            "version": "2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/payplug/payplug-php.git",
+                "reference": "ddda4cede57d27f73388ccd0d92270164ac99ce7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/payplug/payplug-php/zipball/ddda4cede57d27f73388ccd0d92270164ac99ce7",
+                "reference": "ddda4cede57d27f73388ccd0d92270164ac99ce7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-openssl": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "2.*",
+                "phpunit/phpunit": "4.6.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Payplug\\": "lib/"
+                },
+                "psr-4": {
+                    "Payplug\\": "lib/Payplug"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PayPlug",
+                    "email": "support@payplug.com"
+                }
+            ],
+            "description": "A simple PHP library for PayPlug public API.",
+            "homepage": "https://www.payplug.com",
+            "time": "2015-05-06T00:00:00+00:00"
+        },
+        {
+            "name": "payplug/payplug-sylius",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/payplug/payplug-sylius.git",
+                "reference": "4c3cf0ecc382fd10942ea0b98028c8ca75ac3bb4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/payplug/payplug-sylius/zipball/4c3cf0ecc382fd10942ea0b98028c8ca75ac3bb4",
+                "reference": "4c3cf0ecc382fd10942ea0b98028c8ca75ac3bb4",
+                "shasum": ""
+            },
+            "require": {
+                "payplug/payplug-php": "^2.6",
+                "php": "^7.2",
+                "sylius/sylius": "^1.4"
+            },
+            "conflict": {
+                "symfony/browser-kit": "4.1.8",
+                "symfony/dependency-injection": "4.1.8",
+                "symfony/dom-crawler": "4.1.8",
+                "symfony/routing": "4.1.8",
+                "symfony/symfony": "4.1.8"
+            },
+            "require-dev": {
+                "behat/behat": "^3.4",
+                "behat/mink": "^1.7@dev",
+                "behat/mink-browserkit-driver": "^1.3",
+                "behat/mink-extension": "^2.2",
+                "behat/mink-selenium2-driver": "^1.3",
+                "friends-of-behat/page-object-extension": "^0.3",
+                "friends-of-behat/suite-settings-extension": "^1.0",
+                "friends-of-behat/symfony-extension": "^2.0",
+                "friends-of-behat/variadic-extension": "^1.1",
+                "lakion/mink-debug-extension": "^1.2.3",
+                "phpspec/phpspec": "^5.0",
+                "phpstan/phpstan-doctrine": "^0.10",
+                "phpstan/phpstan-shim": "^0.10",
+                "phpstan/phpstan-symfony": "^0.10",
+                "phpstan/phpstan-webmozart-assert": "^0.10",
+                "phpunit/phpunit": "^6.5",
+                "sensiolabs/security-checker": "^5.0",
+                "sylius-labs/coding-standard": "^2.0",
+                "symfony/browser-kit": "^3.4||^4.1",
+                "symfony/debug-bundle": "^3.4||^4.1",
+                "symfony/dotenv": "^4.2",
+                "symfony/intl": "^3.4||^4.1",
+                "symfony/web-profiler-bundle": "^3.4||^4.1",
+                "symfony/web-server-bundle": "^3.4||^4.1"
+            },
+            "type": "sylius-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PayPlug\\SyliusPayPlugPlugin\\": "src/",
+                    "Tests\\PayPlug\\SyliusPayPlugPlugin\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "PayPlug payment plugin for Sylius applications.",
+            "keywords": [
+                "sylius",
+                "sylius-plugin"
+            ],
+            "time": "2019-12-10T11:20:09+00:00"
         },
         {
             "name": "payum/iso4217",
@@ -14361,12 +14482,12 @@
             "version": "v7.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Symplify/CodingStandard.git",
+                "url": "https://github.com/symplify/coding-standard.git",
                 "reference": "864af829cd9007f3c11d778485082ef0056a1486"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symplify/CodingStandard/zipball/864af829cd9007f3c11d778485082ef0056a1486",
+                "url": "https://api.github.com/repos/symplify/coding-standard/zipball/864af829cd9007f3c11d778485082ef0056a1486",
                 "reference": "864af829cd9007f3c11d778485082ef0056a1486",
                 "shasum": ""
             },
@@ -14410,12 +14531,12 @@
             "version": "v7.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Symplify/EasyCodingStandard.git",
+                "url": "https://github.com/symplify/easy-coding-standard.git",
                 "reference": "d9f483bb42f9c8c169bedd67b5a57663d163163a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symplify/EasyCodingStandard/zipball/d9f483bb42f9c8c169bedd67b5a57663d163163a",
+                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/d9f483bb42f9c8c169bedd67b5a57663d163163a",
                 "reference": "d9f483bb42f9c8c169bedd67b5a57663d163163a",
                 "shasum": ""
             },
@@ -14476,12 +14597,12 @@
             "version": "v7.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Symplify/PackageBuilder.git",
+                "url": "https://github.com/symplify/package-builder.git",
                 "reference": "6d328c576472bbbb54f8fa50d127cf627e1680d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symplify/PackageBuilder/zipball/6d328c576472bbbb54f8fa50d127cf627e1680d5",
+                "url": "https://api.github.com/repos/symplify/package-builder/zipball/6d328c576472bbbb54f8fa50d127cf627e1680d5",
                 "reference": "6d328c576472bbbb54f8fa50d127cf627e1680d5",
                 "shasum": ""
             },
@@ -14522,12 +14643,12 @@
             "version": "v7.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Symplify/SetConfigResolver.git",
+                "url": "https://github.com/symplify/set-config-resolver.git",
                 "reference": "bf63e985dcf88d7651026d062edd314280715da9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symplify/SetConfigResolver/zipball/bf63e985dcf88d7651026d062edd314280715da9",
+                "url": "https://api.github.com/repos/symplify/set-config-resolver/zipball/bf63e985dcf88d7651026d062edd314280715da9",
                 "reference": "bf63e985dcf88d7651026d062edd314280715da9",
                 "shasum": ""
             },
@@ -14565,12 +14686,12 @@
             "version": "v7.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Symplify/SmartFileSystem.git",
+                "url": "https://github.com/symplify/smart-file-system.git",
                 "reference": "aec493bf2d935cd71cec68dbcc299e415ecc2c20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symplify/SmartFileSystem/zipball/aec493bf2d935cd71cec68dbcc299e415ecc2c20",
+                "url": "https://api.github.com/repos/symplify/smart-file-system/zipball/aec493bf2d935cd71cec68dbcc299e415ecc2c20",
                 "reference": "aec493bf2d935cd71cec68dbcc299e415ecc2c20",
                 "shasum": ""
             },
@@ -14724,6 +14845,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "payplug/payplug-sylius": 20,
         "sylius/sylius": 5
     },
     "prefer-stable": true,
@@ -14734,6 +14856,5 @@
     "platform-dev": [],
     "platform-overrides": {
         "php": "7.3.15"
-    },
-    "plugin-api-version": "1.1.0"
+    }
 }
