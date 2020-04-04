@@ -1,5 +1,0 @@
-sylius_ui:
-    events:
-        sylius.shop.layout.footer.grid:
-            blocks: []
-    
