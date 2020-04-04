@@ -1,0 +1,19 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+
+{% block metatags %}
+{{ parent() }}
+    {% if sylius.channel.description is not empty %}
+<meta name="description" content="{{ sylius.channel.description }}" />
+    {% endif %}
+{% endblock %}
+
+
+{% dump(sylius.channel) %}
+{% block content %}
+    <div class="homepage">
+        <div class="ui hidden divider"></div>
+
+        {{ sylius_template_event('sylius.shop.homepage') }}
+    </div>
+{% endblock %}
