@@ -1,4 +1,15 @@
 sylius:
     homepage:
         about_us: "À propos"
-        about_us_content: "Ceci est un site issus du programme Commerce Solidaire contre le COVID-19 sponsorisé par Florentin Garnier - Digital404"        
+        about_us_content: "Ceci est un site issus du programme Commerce Solidaire contre le COVID-19 sponsorisé par Florentin Garnier - Digital404"
+        brace_yoursel_winter_is_coming: "Préparez-vous! L'hiver vient"
+    email:
+        order_confirmation:
+            subject: "Confirmation de commande"
+            your_order_number: "Votre commande numéro : "
+            has_been_successfully_placed: "Est enregistré"
+            view_order_or_change_payment_method: "Consultez ou modifiez votre moyen de paiement"
+            thank_you: "Merci"
+coop_tilleuls_click_n_collect:
+    ui:
+        collect_details: 'Detail de votre retrait'

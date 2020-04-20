@@ -59,4 +59,5 @@ return [
     SitemapPlugin\SitemapPlugin::class => ['all' => true], // Sitemap support
     BitBag\SyliusCmsPlugin\BitBagSyliusCmsPlugin::class  => ['all' => true],
     PayPlug\SyliusPayPlugPlugin\PayPlugSyliusPayPlugPlugin::class => ['all' => true],
+    CoopTilleuls\SyliusClickNCollectPlugin\CoopTilleulsSyliusClickNCollectPlugin::class => ['all' => true],
 ];
