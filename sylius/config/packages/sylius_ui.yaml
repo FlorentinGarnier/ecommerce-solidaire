@@ -1,0 +1,12 @@
+sylius_ui:
+    events:
+        sylius.shop.homepage:
+            blocks: 
+                newsletter: 
+                    enabled: false
+                latest_products:
+                    enabled: false
+                latest_products_carousel:
+                    enabled: false
+                
+    
